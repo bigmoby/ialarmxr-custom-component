@@ -88,7 +88,7 @@ SOFTWARE.
 [issue]: https://img.shields.io/github/issues/bigmoby/ialarmxr-custom-component.svg
 [license-shield]: https://img.shields.io/github/license/bigmoby/ialarmxr-custom-component.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-dev%20-brightgreen.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/bigmoby/ialarmxr-custom-component.svg
 [releases]: https://github.com/bigmoby/ialarmxr-custom-component/releases

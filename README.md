@@ -1,4 +1,4 @@
-# Home Assistant iAlarm Custom component
+# Home Assistant iAlarmXR Custom component
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]

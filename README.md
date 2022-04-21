@@ -18,7 +18,7 @@ This is a temporary custom component implementation for iAlarmXR alarm. A core i
 1. Please copy all files from this project to your Home Assistant custom_component folder, something like `/root/config/custom_components/ialarmxr`;
 2. Restart Home Assistant
 3. Add in your Home Assistant configuration.yaml the ialarmxr configuration `ialarmxr:`
-4. Restart Home Assistant
+4. Restart again Home Assistant
 5. In Integration menu add the new integration ialarmxr and configure it
 6. ...that's it
 

@@ -13,6 +13,8 @@ Temporary custom component implementation for iAlarmXR alarm
 
 This is a temporary custom component implementation for iAlarmXR alarm. A core integration PR (https://github.com/home-assistant/core/pull/67817) is already in a review status.
 
+ATTENTION: this project will be dismissed after the Home Assistant core integration approval process!
+
 ## How-to install
 
 1. Please copy all files from this project to your Home Assistant custom_component folder, something like `/root/config/custom_components/ialarmxr`;

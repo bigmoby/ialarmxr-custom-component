@@ -78,18 +78,12 @@ SOFTWARE.
 
 [original_project]: https://github.com/bigmoby/ialarmxr-custom-component
 [contributors]: https://github.com/bigmoby/ialarmxr-custom-component/graphs/contributors
-[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [commits-shield]: https://img.shields.io/github/commit-activity/y/bigmoby/ialarmxr-custom-component.svg
 [commits]: https://github.com/bigmoby/ialarmxr-custom-component/commits/main
-[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://img.shields.io/github/issues/bigmoby/ialarmxr-custom-component.svg
 [license-shield]: https://img.shields.io/github/license/bigmoby/ialarmxr-custom-component.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-dev%20-brightgreen.svg
-[reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/v/release/bigmoby/ialarmxr-custom-component
 [releases]: https://github.com/bigmoby/ialarmxr-custom-component/releases
 [repository]: https://github.com/bigmoby/ialarmxr-custom-component

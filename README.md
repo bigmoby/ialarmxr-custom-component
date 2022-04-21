@@ -7,7 +7,7 @@
 ![Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-WireGuard: fast, modern, secure VPN tunnel.
+Temporary custom component implementation for iAlarmXR alarm
 
 ## About
 

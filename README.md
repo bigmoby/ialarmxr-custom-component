@@ -17,11 +17,11 @@ ATTENTION: this project will be dismissed after the Home Assistant core integrat
 
 ## How-to install
 
-1. Please copy all files from this project to your Home Assistant custom_component folder, something like `/root/config/custom_components/ialarmxr`;
+1. Please copy all files from this project to your Home Assistant custom_component folder, something like `/root/config/custom_components/ialarm_xr`;
 2. Restart Home Assistant
-3. Add in your Home Assistant configuration.yaml the ialarmxr configuration `ialarmxr:`
+3. Add in your Home Assistant configuration.yaml the ialarmxr configuration `ialarm_xr:`
 4. Restart again Home Assistant
-5. In Integration menu add the new integration ialarmxr and configure it
+5. In Integration menu add the new integration ialarm_xr and configure it
 6. ...that's it
 
 ## Contributing

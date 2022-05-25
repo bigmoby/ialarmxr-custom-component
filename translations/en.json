@@ -5,16 +5,15 @@
         },
         "error": {
             "cannot_connect": "Failed to connect",
-            "ialarmxr_generic_exception": "iAlarmXR generic error, please read the logs",
             "unknown": "Unexpected error"
         },
         "step": {
             "user": {
                 "data": {
                     "host": "Host",
+                    "password": "Password",
                     "port": "Port",
-                    "username": "Username",
-                    "password": "Password"
+                    "username": "Username"
                 }
             }
         }

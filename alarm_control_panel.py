@@ -1,6 +1,8 @@
 """Interfaces with iAlarmXR control panels."""
 from __future__ import annotations
 
+from pyialarmxr import IAlarmXR
+
 from homeassistant.components.alarm_control_panel import (
     AlarmControlPanelEntity,
     AlarmControlPanelEntityFeature,
@@ -11,7 +13,6 @@ from homeassistant.const import (
     STATE_ALARM_ARMED_HOME,
     STATE_ALARM_DISARMED,
     STATE_ALARM_TRIGGERED,
-    STATE_UNKNOWN,
 )
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import device_registry
@@ -21,6 +22,13 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import IAlarmXRDataUpdateCoordinator
 from .const import DOMAIN
+
+IALARMXR_TO_HASS = {
+    IAlarmXR.ARMED_AWAY: STATE_ALARM_ARMED_AWAY,
+    IAlarmXR.ARMED_STAY: STATE_ALARM_ARMED_HOME,
+    IAlarmXR.DISARMED: STATE_ALARM_DISARMED,
+    IAlarmXR.TRIGGERED: STATE_ALARM_TRIGGERED,
+}
 
 
 async def async_setup_entry(
@@ -56,19 +64,9 @@ class IAlarmXRPanel(
     @property
     def state(self) -> str | None:
         """Return the state of the device."""
-
-        state = STATE_UNKNOWN
-
-        if self.coordinator.state == "disarmed":
-            state = STATE_ALARM_DISARMED
-        elif self.coordinator.state == "armed_away":
-            state = STATE_ALARM_ARMED_AWAY
-        elif self.coordinator.state == "armed_home":
-            state = STATE_ALARM_ARMED_HOME
-        elif self.coordinator.state == "triggered":
-            state = STATE_ALARM_TRIGGERED
-
-        return state
+        if self.coordinator.state in IALARMXR_TO_HASS:
+            return IALARMXR_TO_HASS[self.coordinator.state]
+        return None
 
     def alarm_disarm(self, code: str | None = None) -> None:
         """Send disarm command."""

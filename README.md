@@ -1,4 +1,4 @@
-# Home Assistant iAlarmXR Custom component
+# Home Assistant Meianlike Custom component
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -7,21 +7,15 @@
 ![Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-Temporary custom component implementation for iAlarmXR alarm
-
-## About
-
-This is a temporary custom component implementation for iAlarmXR alarm. A core integration PR (https://github.com/home-assistant/core/pull/67817) is already in a review status.
-
-ATTENTION: this project will be dismissed after the Home Assistant core integration approval process!
+A simple custom component implementation for a meianlike alarm.
 
 ## How-to install
 
-1. Please copy all files from this project to your Home Assistant custom_component folder, something like `/root/config/custom_components/ialarm_xr`;
+1. Please copy all files from this project to your Home Assistant custom_component folder, something like `/root/config/custom_components/meianlike`;
 2. Restart Home Assistant
-3. Add in your Home Assistant configuration.yaml the ialarmxr configuration `ialarm_xr:`
+3. Add in your Home Assistant configuration.yaml the meianlike configuration `meianlike:`
 4. Restart again Home Assistant
-5. In Integration menu add the new integration ialarm_xr and configure it
+5. In Integration menu add the new integration meianlike and configure it
 6. ...that's it
 
 ## Contributing
@@ -76,14 +70,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-[original_project]: https://github.com/bigmoby/ialarmxr-custom-component
-[contributors]: https://github.com/bigmoby/ialarmxr-custom-component/graphs/contributors
-[commits-shield]: https://img.shields.io/github/commit-activity/y/bigmoby/ialarmxr-custom-component.svg
-[commits]: https://github.com/bigmoby/ialarmxr-custom-component/commits/main
-[issue]: https://img.shields.io/github/issues/bigmoby/ialarmxr-custom-component.svg
-[license-shield]: https://img.shields.io/github/license/bigmoby/ialarmxr-custom-component.svg
+[original_project]: https://github.com/bigmoby/meianlike-custom-component
+[contributors]: https://github.com/bigmoby/meianlike-custom-component/graphs/contributors
+[commits-shield]: https://img.shields.io/github/commit-activity/y/bigmoby/meianlike-custom-component.svg
+[commits]: https://github.com/bigmoby/meianlike-custom-component/commits/main
+[issue]: https://img.shields.io/github/issues/bigmoby/meianlike-custom-component.svg
+[license-shield]: https://img.shields.io/github/license/bigmoby/meianlike-custom-component.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-dev%20-brightgreen.svg
-[releases-shield]: https://img.shields.io/github/v/release/bigmoby/ialarmxr-custom-component
-[releases]: https://github.com/bigmoby/ialarmxr-custom-component/releases
-[repository]: https://github.com/bigmoby/ialarmxr-custom-component
+[releases-shield]: https://img.shields.io/github/v/release/bigmoby/meianlike-custom-component
+[releases]: https://github.com/bigmoby/meianlike-custom-component/releases
+[repository]: https://github.com/bigmoby/meianlike-custom-component

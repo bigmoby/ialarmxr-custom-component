@@ -1,11 +1,11 @@
 {
-  "domain": "ialarm_xr",
-  "name": "Antifurto365 iAlarmXR",
-  "documentation": "https://www.home-assistant.io/integrations/ialarm_xr",
-  "requirements": ["pyialarmxr==1.0.18"],
+  "domain": "meianlike",
+  "name": "A meianlike alarm integration",
+  "documentation": "https://www.home-assistant.io/integrations/meianlike",
+  "requirements": ["pymeianlike==1.0.0"],
   "codeowners": ["@bigmoby"],
   "config_flow": true,
   "iot_class": "cloud_polling",
-  "loggers": ["pyialarmxr"],
-  "version": "1.0.8"
+  "loggers": ["pymeianlike"],
+  "version": "1.0.0"
 }

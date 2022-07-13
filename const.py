@@ -1,3 +1,3 @@
-"""Constants for the iAlarmXR integration."""
+"""Constants for the meianlike integration."""
 
-DOMAIN = "ialarm_xr"
+DOMAIN = "meianlike"

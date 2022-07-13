@@ -1,14 +1,14 @@
-"""Config flow for Antifurto365 iAlarmXR integration."""
+"""Config flow for a Meianlike alarm integration."""
 from __future__ import annotations
 
 import logging
 from logging import Logger
 from typing import Any
 
-from pyialarmxr import (
-    IAlarmXR,
-    IAlarmXRGenericException,
-    IAlarmXRSocketTimeoutException,
+from pymeianlike import (
+    Meianlike,
+    MeianlikeGenericException,
+    MeianlikeSocketTimeoutException,
 )
 import voluptuous as vol
 
@@ -17,14 +17,14 @@ from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_PORT, CONF_USERNA
 from homeassistant.data_entry_flow import FlowResult
 
 from .const import DOMAIN
-from .utils import async_get_ialarmxr_mac
+from .utils import async_get_meianlike_mac
 
 _LOGGER: Logger = logging.getLogger(__name__)
 
 DATA_SCHEMA = vol.Schema(
     {
-        vol.Required(CONF_HOST, default=IAlarmXR.IALARM_P2P_DEFAULT_HOST): str,
-        vol.Required(CONF_PORT, default=IAlarmXR.IALARM_P2P_DEFAULT_PORT): int,
+        vol.Required(CONF_HOST, default=Meianlike.MEIANLIKE_P2P_DEFAULT_HOST): str,
+        vol.Required(CONF_PORT, default=Meianlike.MEIANLIKE_P2P_DEFAULT_PORT): int,
         vol.Required(CONF_USERNAME): str,
         vol.Required(CONF_PASSWORD): str,
     }
@@ -34,14 +34,14 @@ DATA_SCHEMA = vol.Schema(
 async def _async_get_device_formatted_mac(
     hass: core.HomeAssistant, username: str, password: str, host: str, port: int
 ) -> str:
-    """Return iAlarmXR mac address."""
+    """Return Meianlike mac address."""
 
-    ialarmxr = IAlarmXR(username, password, host, port)
-    return await async_get_ialarmxr_mac(hass, ialarmxr)
+    meianlike = Meianlike(username, password, host, port)
+    return await async_get_meianlike_mac(hass, meianlike)
 
 
-class IAlarmConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for Antifurto365 iAlarmXR."""
+class MeianlikeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+    """Handle a config flow for a Meianlike."""
 
     VERSION = 1
 
@@ -67,16 +67,16 @@ class IAlarmConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 )
             except ConnectionError:
                 errors["base"] = "cannot_connect"
-            except IAlarmXRGenericException as ialarmxr_exception:
+            except MeianlikeGenericException as meianlike_exception:
                 _LOGGER.debug(
-                    "IAlarmXRGenericException with message: [ %s ]",
-                    ialarmxr_exception.message,
+                    "MeianlikeGenericException with message: [ %s ]",
+                    meianlike_exception.message,
                 )
                 errors["base"] = "cannot_connect"
-            except IAlarmXRSocketTimeoutException as ialarmxr_socket_timeout_exception:
+            except MeianlikeSocketTimeoutException as meianlike_socket_timeout_exception:
                 _LOGGER.debug(
-                    "IAlarmXRSocketTimeoutException with message: [ %s ]",
-                    ialarmxr_socket_timeout_exception.message,
+                    "MeianlikeSocketTimeoutException with message: [ %s ]",
+                    meianlike_socket_timeout_exception.message,
                 )
                 errors["base"] = "timeout"
             except Exception:  # pylint: disable=broad-except

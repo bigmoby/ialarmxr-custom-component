@@ -1,4 +1,4 @@
-# Home Assistant Meianlike Custom component
+# Home Assistant a meianlike alarm Custom component
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
